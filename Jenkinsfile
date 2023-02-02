@@ -45,7 +45,7 @@ stage('Kubernetes') {
         }
       }
       sh "kubectl apply -f deployment.yml -n ${namespace}"
-      sh "kubectl -n ${namespace} rolleout restart deployment flaskcontainer"
+      sh "kubectl -n ${namespace} rollout restart deployment flaskcontainer"
     }
   }
 }
